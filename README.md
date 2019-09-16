@@ -6,6 +6,7 @@ Refactory is a fully automated approach for generating student program repairs i
 Yang Hu, Umair Z. Ahmed, Sergey Mechtaev, Ben Leong, Abhik Roychoudhury
 
 If you use Refactory in your research project, please include the following citation:
+
 	@inproceedings{yang2019refactory,
         title={Re-factoring based Program Repair applied to Programming Assignments},
         author={Hu, Yang and Ahmed, Umair Z. and Mechtaev, Sergey and Leong, Ben and Roychoudhury, Abhik},
