@@ -2,9 +2,17 @@
 ## What is Refactory
 Refactory is a fully automated approach for generating student program repairs in real-time. It refactors all available correct solutions to semantically equivalent solutions in an online/offline phase. Those solutions are then used to repair the incorrect solutions via search-based program synthesis.
 
-## Authors
+## Contributors:
+### Authors
 Yang Hu, Umair Z. Ahmed, Sergey Mechtaev, Ben Leong, Abhik Roychoudhury
 
+### Principal Investigator
+Abhik Roychoudhury
+
+### Developers
+Yang Hu, Umair Z. Ahmed
+
+## Publication
 If you use Refactory in your research project, please include the following citation:
 
 	@inproceedings{yang2019refactory,
@@ -15,11 +23,6 @@ If you use Refactory in your research project, please include the following cita
         organization={IEEE/ACM}
     }
 
-## Principal Investigator
-Abhik Roychoudhury
-
-## Developers
-Yang Hu, Umair Z. Ahmed
 
 ## Usage
 ### Data Format
@@ -57,13 +60,10 @@ Besides manually deploying the experimental environment, you can setup the envir
 `sudo docker build -t refactory ./docker/`
 
 #### Refactory's CLI
-
-##### General Flags
 Refactory has a command line interface in run.py. In general, you need to declare the path of data directory via `-d`, the question name via `-q`, and a list of sampling rate via `-s`. Besides, add `-o` to enable online refactoring, add `-f` to enable offline refacotirng，add `-b` to enable block repair, and add `-m` to enable structure mutation. Please kindly note that Refactory currently does not support to enable both online and offline refactoring. For example, consider the following command.
 
 `python run.py -d ./data -q question_123 -s 100 -o -m -b` 
 
 Those flags indicate you want to run Refactory with 100% sampling rate, online refactoring, and structure mutaion and block repair to fix all buggy programs in question_123 in the `./data` directory.
 
-##### Flag for Log Generation
 By default, Refactory logs repairs, time consumotion, relative patch size and etc into a csv file for each question. The csv file name is refactory_*.csv, where * should be 'online', 'offline', or 'norefactor'. To combine logs for different questions, you can use `-c` flag to ask Refactory to combine all csv files generated under the same setting into one csv file.
