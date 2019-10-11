@@ -58,9 +58,9 @@ class Reporter:
             stru_cnt *= len(cluster_list_map[func_name])
 
         if time_left is not None:
-            print("%.2f" % time_left, "%.4f" % mr, stru_cnt)
+            print("Left Time: %.2f," % time_left, "Mathing Rate: %.4f," % mr, "# Structures: " + str(stru_cnt), end='\r')
         else:
-            print("%.4f" % mr, stru_cnt)
+            print("Mathing Rate: %.4f," % mr, "# Structures: " + str(stru_cnt), end='\r')
 
 
 class Refactoring:

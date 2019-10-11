@@ -25,7 +25,7 @@ def shf_corr_path_list(ques_dir_path):
 
 def ofl_refactor_ques(ques_dir_path, timeout, max_depth, sampling_rate, exp_idx, is_resume=False, verbose=False):
 
-    print(ques_dir_path, sampling_rate, exp_idx)
+    print("Current Setting:", ques_dir_path, sampling_rate, exp_idx)
 
     refactor_dir = ques_dir_path + "/code/refactor"
     if not os.path.isdir(refactor_dir):
@@ -89,7 +89,12 @@ def ofl_refactor_ques(ques_dir_path, timeout, max_depth, sampling_rate, exp_idx,
                 print(corr_code_path)
                 shutil.move(corr_code_path, pseudo_corr_dir_path)
 
-    print(len(list(corr_code_map.values())), len(corr_path_list))
+    print(
+    	"Filter Pseudo Corr. Code:",
+    	len(corr_path_list) + len(os.listdir(ref_dir_path)),
+    	"->",
+    	len(list(corr_code_map.values())))
+
     assert(len(list(corr_code_map.values())) > 0)
 
     # offline refactoring

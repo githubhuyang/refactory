@@ -43,15 +43,12 @@ class Tester:
                 for k, v in part_res.items():
                     res[k] = v
             elif os.path.isfile(curr_path):
-                atom_list = file_name.split("_")
-                mytype = atom_list[0]
+                mytype = file_name.split("_")[0]
 
-                tmp = atom_list[1].split(".")[0]
-                assert(tmp.isnumeric())
-
-                number = int(tmp)
+                tc_id = file_name[len(mytype)+1:].split(".")[0]
+                
                 if mytype == type_name:
-                    res[number] = curr_path
+                    res[tc_id] = curr_path
         return res
 
     def tv_code(self, code, timeout=2):
@@ -131,11 +128,3 @@ class Tester:
                 print(tr)
                 return False
         return True
-
-
-def tst_tester():
-    ques_dir_path = os.getcwd() + "/../data/manual/question_103884"
-    t = Tester(ques_dir_path)
-    t.tv_corr_codes()
-
-#tst_tester()
