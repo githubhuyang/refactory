@@ -22,7 +22,7 @@ If you use any part of our Refactory tool or data present in this repository, th
         title={Re-factoring based Program Repair applied to Programming Assignments},
         author={Hu, Yang and Ahmed, Umair Z. and Mechtaev, Sergey and Leong, Ben and Roychoudhury, Abhik},
         booktitle={2019 34th IEEE/ACM International Conference on Automated Software Engineering (ASE)},
-	pages={388--398},
+        pages={388--398},
         year={2019},
         organization={IEEE/ACM}
     }
