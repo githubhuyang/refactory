@@ -16,7 +16,7 @@ Abhik Roychoudhury
 Yang Hu, Umair Z. Ahmed
 
 ## Publication
-If you use any part of our Refactory tool or data present in this repository, then please do cite our [ASE-2019 Refactory paper](https://www.comp.nus.edu.sg/~abhik/pdf/ASE19.pdf).
+If you use any part of our Refactory tool or data present in this repository, then please do cite our [ASE-2019 Refactory paper](https://ieeexplore.ieee.org/abstract/document/8952522).
 
 	@inproceedings{yang2019refactory,
         title={Re-factoring based Program Repair applied to Programming Assignments},
@@ -29,7 +29,7 @@ If you use any part of our Refactory tool or data present in this repository, th
 
 
 ## Dataset
-The `data.zip` archive contains 2442 correct and 1783 buggy program attempts by 361 undergraduate students crediting an introduction to Python programming course at NUS (National University of Singapore). This dataset of 5 programming assignments is described in Section-V and Table-II of our [ASE-2019 Refactory paper](https://www.comp.nus.edu.sg/~abhik/pdf/ASE19.pdf). 
+The `data.zip` archive contains 2442 correct and 1783 buggy program attempts by 361 undergraduate students crediting an introduction to Python programming course at NUS (National University of Singapore). This dataset of 5 programming assignments is described in Section-V and Table-II of our [ASE-2019 Refactory paper](https://ieeexplore.ieee.org/abstract/document/8952522). 
 
 Refactory tool expects the following inputs:
 1. `Test-Suite`: Collection of input (`input_x.txt`) and its corresponding excepted output (`output_x.txt`). 
@@ -97,10 +97,10 @@ Refactory tool is invoked using the command line interface offered by run.py.  F
 - `-d` flag specifies the path of data directory
 - `-q` flag specifies the question (folder) name within data directory
 - `-s` flag specifies the sampling rate. With `-s 0` option, only the instructor provided reference program is used to repair buggy student programs. `-s 100` option indicates that 100% of correct student programs (along with the instructor provided reference program) are used.
-- `-o` flag enables online refactoring phase to generate new semantically equivalent correct programs, as described in Section-III of our [ASE-2019 Refactory paper](https://www.comp.nus.edu.sg/~abhik/pdf/ASE19.pdf).
+- `-o` flag enables online refactoring phase to generate new semantically equivalent correct programs, as described in Section-III of our [ASE-2019 Refactory paper](https://ieeexplore.ieee.org/abstract/document/8952522).
 - `-f` flag applies the refactoring rules on all correct programs in an offline phase. During the online phase, the closest aligned refactored program is chosen for repair. Note that our implementation does not support  online and offline (`-o` and `-f` flags) simultaneously. 
-- `-m` flag enables structure mutation phase, where the control flow structure of buggy program is mutated to match the closest refactored correct program. This phase occurs only if no refactored program with an exact control flow match is found, after the refactoring phase (`-o` or `-f` flag). This phase is described in Section-III of our [ASE-2019 Refactory paper](https://www.comp.nus.edu.sg/~abhik/pdf/ASE19.pdf). 
-- `-b` flag enables the block repair phase, where blockwise repair of buggy programs is performed by synthesizing a patch based on blockwise input-output specification of aligned (refactored) correct program. This phase is described in Section-IV of our [ASE-2019 Refactory paper](https://www.comp.nus.edu.sg/~abhik/pdf/ASE19.pdf). 
+- `-m` flag enables structure mutation phase, where the control flow structure of buggy program is mutated to match the closest refactored correct program. This phase occurs only if no refactored program with an exact control flow match is found, after the refactoring phase (`-o` or `-f` flag). This phase is described in Section-III of our [ASE-2019 Refactory paper](https://ieeexplore.ieee.org/abstract/document/8952522). 
+- `-b` flag enables the block repair phase, where blockwise repair of buggy programs is performed by synthesizing a patch based on blockwise input-output specification of aligned (refactored) correct program. This phase is described in Section-IV of our [ASE-2019 Refactory paper](https://ieeexplore.ieee.org/abstract/document/8952522). 
 
 ### Output logs
 After the completion of a run by Refactory tool, the intermediate results such as repaired program, time-taken, relative patch size, etc are logged into a csv file `./data/question_x/refactory_*.csv`. 
