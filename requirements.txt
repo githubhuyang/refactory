@@ -5,5 +5,5 @@ python-Levenshtein==0.12.0
 astunparse==1.6.2
 prettytable==0.7.2
 fastcache==1.1.0
-numpy==1.16.4
-pandas==0.24.2
+numpy==1.23.2
+pandas==1.4.3
